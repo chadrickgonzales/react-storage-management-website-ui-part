@@ -45,9 +45,9 @@ export default function Sidebar() {
   return (
     <div className="flex h-screen">
       {/* 🔹 Sidebar */}
-      <nav className="flex flex-col w-64 py-6 px-6 bg-white">
+      <nav className="flex flex-col w-80 py-6 px-6 bg-white">
         <div>
-          <div className="flex flex-row mb-14 items-center">
+          <div className="flex flex-row mb-14 items-center ml-2">
             <Image
               src="/assets/icons/logo-brand.svg"
               alt="StorageApp Logo"
@@ -64,7 +64,7 @@ export default function Sidebar() {
               <button
                 key={link.id}
                 onClick={() => setActivePage(link.id)}
-                className={`flex items-center space-x-3  p-3  mb-4 rounded-full transition-all duration-200 w-full text-left ${
+                className={`flex items-center  space-x-2 px-12 py-4  mb-4 rounded-full transition-all duration-200 w-full text-left ${
                   isActive
                     ? "bg-brand-coral text-brand-white shadow-lg"
                     : "text-brand-charcoal"
@@ -75,19 +75,19 @@ export default function Sidebar() {
                   alt={link.name}
                   className="w-5 h-5 mr-2 inline-block"
                 />
-                <span className="font-medium">{link.name}</span>
+                <span className="font-medium text-lg">{link.name}</span>
               </button>
             );
           })}
         </div>
 
-        <div className="relative flex justify-center mt-auto mb-6">
-          <div className="absolute top-16 w-full h-[85px] bg-brand-coral/10 rounded-3xl" />
+        <div className="relative flex justify-center mt-auto mb-16">
+          <div className="absolute top-24 w-full h-[130px] bg-brand-coral/10 rounded-3xl" />
           <Image
             src="/assets/images/files.png"
             alt="App Logo"
-            width={130}
-            height={130}
+            width={190}
+            height={190}
             className="relative z-10"
           />
         </div>
@@ -128,7 +128,7 @@ export default function Sidebar() {
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
-            className="w-80 p-2 placeholder:text-brand-charcoal text-brand-charcoal focus:outline-none"
+            className="w-[600px] p-2 placeholder:text-brand-charcoal text-brand-charcoal focus:outline-none"
           />
           </div>
 
@@ -150,7 +150,7 @@ export default function Sidebar() {
               <img 
                 src="/assets/icons/logout.svg" 
                 alt="My Icon" 
-                className="w-5 h-5"
+                className="w-7 h-7"
               />
             </button>
 
@@ -158,7 +158,7 @@ export default function Sidebar() {
         </header>
 
         {/* Page content below header */}
-        <main className="flex-1 p-6 ">
+        <main className="flex-1 p-2 pr-6 pb-6 bg-white">
           {renderActivePage()}
         </main>
       </div>
