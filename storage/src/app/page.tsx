@@ -1,7 +1,4 @@
+// This page is no longer used as the sidebar handles all routing
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-brand-dark-blue text-brand-white">
-     
-    </div>
-  );
+  return null;
 }
